@@ -3,9 +3,9 @@ let name = document.querySelector("#name");
 let email = document.querySelector("#email");
 let phone = document.querySelector("#phone");
 let message = document.querySelector("#message");
-const loader = document.querySelector('.loader');
-const successMessage = document.querySelector(".successMessage");
-const errorMessage = document.querySelector(".errorMessage");
+const loader = document.querySelector('#loader');
+const successMessage = document.querySelector("#successMessage");
+const errorMessage = document.querySelector("#errorMessage");
 
 const collapseButton = document.querySelector(".collapse-button");
 const menu = document.querySelector(".menu");
