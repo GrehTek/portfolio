@@ -8,6 +8,7 @@ const collapseButton = document.querySelector(".collapse-button");
 const menu = document.querySelector(".menu");
 
 const submitForm = () => {
+    console.log(config.API_TOKEN)
     // ensure no field is empty
     if(name.value.trim() == ""){
         name.classList.add('input-error');
