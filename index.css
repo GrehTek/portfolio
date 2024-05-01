@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    display: flex;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.carousel {
+    display: flex;
+    background-color: silver;
+    align-items: center;
+    padding: 2rem;
+    background-image: url('img/carousel_3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.carousel > div > h1, .carousel > div > h5 {
+    margin: 30px 0;
+}
+
+.carousel > div > h1 {
+    font-weight: bold;
+    font-size: 45px;
+    color: white;
+}
+
+.carousel > div > h5 {
+    font-size: large;
+    color: skyblue
+}
+
+.carousel > div > a {
+    text-decoration: none;
+}
+
+.carousel > div > .reach-out {
+    padding: 10px;
+    font-weight: bolder;
+    font-size: larger;
+    background-color: orangered;
+    border: none;
+    border-radius: .3em;
+    color: white;
+    margin: 1em;
+}
+
+.carousel > div > .enroll {
+    padding: 10px;
+    font-weight: bolder;
+    font-size: larger;
+    background-color: inherit;
+    border: 2px solid orangered;
+    border-radius: .3em;
+    color: orangered;
+    margin: 1em;
+}
+
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar-static {
+    position: static;
+}
+
+.navbar-light {
+    background-color: lightgray;
+}
+
+.navbar-dark {
+    background-color: black;
+}
+
+.text-white {
+    color: white
+}
+
+.text-dark {
+    color: black
+}
+
+.navbar-logo {
+    width: 5em;
+    height: auto;
+}
+
+.collapse-container {
+    display: none;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+}
+
+.menu-item {
+    margin: 0 10px 0 0;
+}
+
+.menu-item > a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-item > a:hover {
+    color: orange;
+}
+
+.p-2 {
+    padding: 5px
+}
+
+.about {
+    background-image: url("img/purple_bg_2.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3rem;
+    color: white;
+    position:sticky;
+}
+
+.about > div > div > img {
+    width: 10rem;
+    height: auto;
+    float: left;
+    padding: 1em;
+}
+
+.about > div  > p {
+    font-size: 20px;
+    text-align: justify;
+    padding: 1em;
+}
+
+.about > div > div > p::first-letter {
+    font-size: 250%;
+}
+
+.contact {
+    padding: 2em;
+    background-image: url("img/white_bg_2.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contact > div > div {
+    padding: 1.5em;
+    line-height: 3rem;
+    text-align: center;
+}
+
+.contact > div > div > p {
+    font-size: 24px;
+}
+
+.form-control {
+    width: 40dvw;
+    height: 30px;
+    border-radius: .3rem;
+    margin-bottom: 1rem;
+    padding: 0 0 0 5px
+}
+
+.remove-link-decor {
+    text-decoration: none;
+}
+
+.text-success {
+    color: green;
+}
+
+.text-danger {
+    color: red;
+}
+
+.text-primary {
+    color: skyblue
+}
+
+.textarea {
+    width: 40dvw;
+    margin-bottom: 1rem;
+}
+
+.col {
+    width: 50%;
+}
+
+#submit_btn:hover {
+    cursor:pointer
+}
+
+.btn-block {
+    max-width: 50dvw;
+    width: 40dvw;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 1rem;
+    font-size: large;
+    border-radius: .3rem;
+    border: 0 none
+}
+
+.btn-primary {
+    background-color: skyblue;
+}
+
+.btn-primary:hover {
+    background-color: blue;
+    color: white
+}
+
+.input-error {
+    border: 1px solid red;
+}
+
+.input-success {
+    max-width: 50dvw;
+    width: 40dvw;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 1rem;
+    font-size: large;
+    border-radius: .3rem;
+    border: 1px solid green
+}
+
+footer > .col-1 {
+    background-color: black;
+    padding: .5rem;
+}
+
+footer > .col-1 > center > img {
+    width: 4.5rem;
+    height: auto;
+}
+
+footer > .col-1 > h6 {
+    color: skyblue;
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+footer > .col-1 > ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+footer > .col-1 > ul > a {
+    text-decoration: none;
+    color: white
+}
+
+footer > .col-1 > ul > a:hover {
+    color: orangered;
+    transform: scale(1.3 );
+    transition-delay: 1;
+    transition-duration: 1s;
+}
+
+footer > .col-1 > ul > a > li {
+    font-size: 14px;
+}
+
+footer > .col-1 > ul > li {
+    padding: 0 1rem;
+    color: white;
+}
+
+footer > .col-1 > p {
+    color: white;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+
+
+
+/* tutorial page */
+.tutorial_carousel {
+    height: auto;
+    width: 100%;
+}
+
+
+
+
+/* media query */
+@media only screen and (max-width: 640px){
+    .navbar {
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+    
+    .collapse-container {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        position: absolute;
+        display: block;
+        flex-direction: column;
+        padding: 5px;
+        background-color: silver;
+        right: .5rem;
+        line-height: 1.5rem;
+    }
+
+    .menu-item > a:hover {
+        color: blue;
+        
+    }
+
+    #contact > div{
+        display: block;
+    }
+
+    #contact > div > .col {
+        width: 100%;
+        text-align: center;
+    }
+
+    .form-control {
+        width: 80%;
+    }
+
+    #message {
+        width: 80%;
+    }
+}
+
