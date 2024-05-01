@@ -130,36 +130,36 @@
     position:sticky;
 }
 
+.about {
+    background-image: linear-gradient(to top left, purple, indigo);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem;
+    color: white;
+}
+
 .about > div > div > img {
     width: 10rem;
     height: auto;
     float: left;
-    padding: 1em;
-}
-
-.about > div  > p {
-    font-size: 20px;
-    text-align: justify;
-    padding: 1em;
 }
 
 .about > div > div > p::first-letter {
     font-size: 250%;
 }
 
-.contact {
+#contact {
     padding: 2em;
     background-image: url("img/white_bg_2.avif");
     background-repeat: no-repeat;
     background-size: cover;
 }
-.contact > div > div {
-    padding: 1.5em;
+#contact > div > div {
     line-height: 3rem;
     text-align: center;
 }
 
-.contact > div > div > p {
+#contact > div > div > p {
     font-size: 24px;
 }
 
@@ -287,7 +287,8 @@ footer > .col-1 > p {
 #loader {
     width: 3rem;
     height: auto;
-    display: block;
+    text-align: center;
+    
 }
 
 
