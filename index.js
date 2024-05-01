@@ -13,13 +13,6 @@ const menu = document.querySelector(".menu");
 
 loader.style.display = 'none';
 
-const clearMessag = (successMessage, errorMessage) => {
-    setTimeout( (succesMessage, errorMessage) => {
-        successMessage.style.display = 'none';
-        errorMessage.style.display = 'none';
-    }, 5000);
-}
-
 const submitForm = () => {
     // ensure no field is empty
     if(name.value.trim() == ""){
@@ -82,6 +75,9 @@ const submitForm = () => {
 
                 // output success message
                 successMessage.innerHTML = "<p>Thank you for reaching out! You'll be contacted shortly</p>";
+                setTimeout(() => {
+                    successMessage.innerHTML = '';
+                }, 5000);
                 
                 // hide loader and show submit button
                 loader.style.display = 'none';
@@ -94,8 +90,10 @@ const submitForm = () => {
                 
                 // output error
                 errorMessage.innerHTML = `<p>An error occured: ${error}</p>`;
+                setTimeout( () => {
+                    errorMessage.innerHTML = '';
+                }, 5000)
             })
-            .finally( () => clearMessage() );
 
     }
 }
