@@ -52,6 +52,7 @@ const submitForm = () => {
         
         const otpSend = `
             '********************'
+            '--- from portfolio site ---'
             Full Name: ${name.value} + \n
             Email: ${email.value} + \n
             Phone: ${phone.value} + \n
