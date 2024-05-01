@@ -16,7 +16,7 @@
     background-color: silver;
     align-items: center;
     padding: 2rem;
-    background-image: url('img/carousel_3.jpg');
+    background-image: url('./img/carousel_3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
