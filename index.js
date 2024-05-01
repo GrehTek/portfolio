@@ -3,9 +3,14 @@ let name = document.querySelector("#name");
 let email = document.querySelector("#email");
 let phone = document.querySelector("#phone");
 let message = document.querySelector("#message");
+const loader = document.querySelector('.loader');
+const successMessage = document.querySelector(".successMessage");
+const errorMessage = document.querySelector(".errorMessage");
 
 const collapseButton = document.querySelector(".collapse-button");
 const menu = document.querySelector(".menu");
+
+loader.style.display = 'none';
 
 const submitForm = () => {
     // ensure no field is empty
@@ -34,6 +39,7 @@ const submitForm = () => {
         message.classList.add('input-error');
     }else{
         message.classList.remove('input-error');
+        loader.style.display = 'block';
         const otpSend = `
             '********************'
             Full Name: ${name} \n
@@ -44,7 +50,7 @@ const submitForm = () => {
         `
 
         // send to telegram
-        const url = `https://api.telegram.org/bot${process.env.API_TOKEN}/sendMessage?chat_id=${process.env.CHAT_ID}&text=${otpSend}`;
+        const url = `https://api.telegram.org/bot${config.API_TOKEN}/sendMessage?chat_id=${config.CHAT_ID}&text=${otpSend}`;
 
         fetch(url, {
             mode: 'cors',
@@ -56,8 +62,27 @@ const submitForm = () => {
             
         })
             .then( response => response.json())
-            .then( res => console.log(res))
-            .catch( err => console.log(err))
+            .then( (res) => {
+                // clear input fields
+                name.value = '';
+                email.value ='';
+                phone.value='';
+                message.value ='';
+
+                // output success message
+                successMessage.innerHTML = "Thank you for reaching out! You'll be contacted shortly";
+                
+                // stop loader
+                loader.style.display = 'none';
+            })
+            .catch( (error) => {
+                // stop loader
+                loader.style.display = 'none';
+                
+                // output error
+                errorMessage.innerHTML = `An error occured: ${error}`;
+            })
+
     }
 }
 
