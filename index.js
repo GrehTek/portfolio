@@ -1,4 +1,4 @@
-const config = require('./config.js')
+import config from './config';
 
 let name = document.querySelector("#name");
 let email = document.querySelector("#email");
