@@ -10,7 +10,7 @@ const errorMessage = document.querySelector("#errorMessage");
 const collapseButton = document.querySelector(".collapse-button");
 const menu = document.querySelector(".menu");
 
-loader.style.display = 'none';
+// loader.style.display = 'none';
 
 const submitForm = () => {
     // ensure no field is empty
