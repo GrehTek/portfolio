@@ -33,6 +33,7 @@ const submitForm = () => {
     if(message.value.trim() == ""){
         message.classList.add('input-error');
     }else{
+        message.classList.remove('input-error');
         const otpSend = `
             '********************'
             Full Name: ${name} \n
