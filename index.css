@@ -284,6 +284,11 @@ footer > .col-1 > p {
     margin: 1rem 0;
 }
 
+#loader {
+    width: 3rem;
+    height: auto;
+}
+
 
 
 
