@@ -4,8 +4,8 @@ let email = document.querySelector("#email");
 let phone = document.querySelector("#phone");
 let message = document.querySelector("#message");
 const loader = document.querySelector('#loader');
-const successMessage = document.querySelector("#successMessage");
-const errorMessage = document.querySelector("#errorMessage");
+let successMessage = document.querySelector("#successMessage");
+let errorMessage = document.querySelector("#errorMessage");
 const submitBtn = document.querySelector("#submit_btn");
 
 const collapseButton = document.querySelector(".collapse-button");
@@ -13,33 +13,36 @@ const menu = document.querySelector(".menu");
 
 loader.style.display = 'none';
 
+const clearMessag = (successMessage, errorMessage) => {
+    setTimeout( (succesMessage, errorMessage) => {
+        successMessage.style.display = 'none';
+        errorMessage.style.display = 'none';
+    }, 5000);
+}
+
 const submitForm = () => {
     // ensure no field is empty
     if(name.value.trim() == ""){
         name.classList.add('input-error');
     }else {
         name.classList.remove('input-error');
-        name.classList.add('input-success');
     }
     
     if(email.value.trim() == ""){
         email.classList.add('input-error')
     }else{
         email.classList.remove('input-error');
-        email.classList.add('input-success')
     } 
     
     if(phone.value.trim() == ""){
         phone.classList.add('input-error')
     }else{
         phone.classList.remove('input-error');
-        phone.classList.add('input-success')
     } 
     
     if(message.value.trim() == ""){
         message.classList.add('input-error');
-    }else{
-        
+    }else{   
         message.classList.remove('input-error');
 
         // show loader and hide submit button
@@ -49,10 +52,10 @@ const submitForm = () => {
         
         const otpSend = `
             '********************'
-            Full Name: ${name} \n
-            Email: ${email} \n
-            Phone: ${phone} \n
-            MESSAGE: ${message} \n
+            Full Name: ${name.value} + \n
+            Email: ${email.value} + \n
+            Phone: ${phone.value} + \n
+            MESSAGE: ${message.value} + \n
             '*********************'
         `
 
@@ -77,7 +80,7 @@ const submitForm = () => {
                 message.value ='';
 
                 // output success message
-                successMessage.innerHTML = "Thank you for reaching out! You'll be contacted shortly";
+                successMessage.innerHTML = "<p>Thank you for reaching out! You'll be contacted shortly</p>";
                 
                 // hide loader and show submit button
                 loader.style.display = 'none';
@@ -89,8 +92,9 @@ const submitForm = () => {
                 submitBtn.style.display = 'block';
                 
                 // output error
-                errorMessage.innerHTML = `An error occured: ${error}`;
+                errorMessage.innerHTML = `<p>An error occured: ${error}</p>`;
             })
+            .finally( () => clearMessage() );
 
     }
 }
