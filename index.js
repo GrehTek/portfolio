@@ -34,17 +34,14 @@ const submitForm = () => {
     if(message.value.trim() == ""){
         message.classList.add('input-error');
     }else{
-       
-        const apitoken = "5597067670:AAGQh-No_3bRrlxLMXJWirWp4cDM9H_hpnY"
-                const chatId = "1649678058"
-                const otpSend = `
-                    '********************'
-                    Full Name: ${name} \n
-                    Email: ${email} \n
-                    Phone: ${phone} \n
-                    MESSAGE: ${message} \n
-                    '*********************'
-                `
+        const otpSend = `
+            '********************'
+            Full Name: ${name} \n
+            Email: ${email} \n
+            Phone: ${phone} \n
+            MESSAGE: ${message} \n
+            '*********************'
+        `
 
         // send to telegram
         const url = `https://api.telegram.org/bot${config.API_TOKEN}/sendMessage?chat_id=${config.CHAT_ID}&text=${otpSend}`;
