@@ -6,11 +6,12 @@ let message = document.querySelector("#message");
 const loader = document.querySelector('#loader');
 const successMessage = document.querySelector("#successMessage");
 const errorMessage = document.querySelector("#errorMessage");
+const submitBtn = document.querySelector("#submit_btn");
 
 const collapseButton = document.querySelector(".collapse-button");
 const menu = document.querySelector(".menu");
 
-// loader.style.display = 'none';
+loader.style.display = 'none';
 
 const submitForm = () => {
     // ensure no field is empty
@@ -38,8 +39,14 @@ const submitForm = () => {
     if(message.value.trim() == ""){
         message.classList.add('input-error');
     }else{
+        
         message.classList.remove('input-error');
+
+        // show loader and hide submit button
         loader.style.display = 'block';
+        submitBtn.style.display = 'none';
+        
+        
         const otpSend = `
             '********************'
             Full Name: ${name} \n
@@ -72,12 +79,14 @@ const submitForm = () => {
                 // output success message
                 successMessage.innerHTML = "Thank you for reaching out! You'll be contacted shortly";
                 
-                // stop loader
+                // hide loader and show submit button
                 loader.style.display = 'none';
+                submitBtn.style.display = 'block';
             })
             .catch( (error) => {
-                // stop loader
+                // hide loader, show submit button
                 loader.style.display = 'none';
+                submitBtn.style.display = 'block';
                 
                 // output error
                 errorMessage.innerHTML = `An error occured: ${error}`;
@@ -99,4 +108,4 @@ const showMenu = () => {
 }
 
 document.querySelector(".collapse-button").addEventListener('click', showMenu)
-document.querySelector("#submit_btn").addEventListener('click', submitForm)
+submitBtn.addEventListener('click', submitForm)
