@@ -87,8 +87,6 @@ const submitForm = () => {
 }
 
 const showMenu = () => {
-    menu.style.display = 'none';
-
     if(menu.style.display === 'none'){
         // show menu
        menu.style.display = 'block';
