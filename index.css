@@ -120,16 +120,6 @@
 .p-2 {
     padding: 5px
 }
-
-.about {
-    background-image: url("img/purple_bg_2.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 3rem;
-    color: white;
-    position:sticky;
-}
-
 .about {
     background-image: linear-gradient(to top left, purple, indigo);
     background-repeat: no-repeat;
