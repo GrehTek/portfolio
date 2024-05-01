@@ -283,7 +283,7 @@ footer > .col-1 > p {
     width: 3rem;
     height: auto;
     text-align: center;
-    
+    display: none;
 }
 
 
