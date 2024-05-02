@@ -42,7 +42,6 @@ const submitForm = () => {
         loader.style.display = 'block';
         submitBtn.style.display = 'none';
         
-        
         const otpSend = `
             '********************'
             '--- from portfolio site ---'
