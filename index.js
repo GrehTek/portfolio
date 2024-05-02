@@ -1,4 +1,4 @@
-import config from './config.js';
+
 let name = document.querySelector("#name");
 let email = document.querySelector("#email");
 let phone = document.querySelector("#phone");
