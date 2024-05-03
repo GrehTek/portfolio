@@ -332,6 +332,10 @@ footer > .col-1 > p {
         display: block;
     }
 
+    .carousel > div > .reach-out, .carousel > div > .enroll {
+        display: block;
+    }
+
     #contact > div{
         display: block;
     }
