@@ -328,6 +328,10 @@ footer > .col-1 > p {
         
     }
 
+    .carousel > div {
+        display: block;
+    }
+
     #contact > div{
         display: block;
     }
