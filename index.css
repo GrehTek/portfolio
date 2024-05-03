@@ -328,16 +328,8 @@ footer > .col-1 > p {
         
     }
 
-    .carousel > div {
+    .carousel {
         display: block;
-    }
-
-    .carousel > div > .reach-out {
-        margin: 1em;
-    }
-
-    .carousel > div > enroll {
-        margin: 1em;
     }
 
     #contact > div{
